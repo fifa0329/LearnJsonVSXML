@@ -1,0 +1,27 @@
+<html>
+<head>
+<script language="JavaScript">
+
+var serverresponse = "[{\"firstname\":\"Troy\",\"lastname\":\"Mott\",\"age\":\"don't ask!\"},{\"firstname\":\"Apple seed\",\"lastname\":\"Mott's\",\"age\":\"99\"}]";
+
+function updatepage()
+{
+    varcontacts = eval(serverresponse );
+    alert(contacts);
+    var i;
+    var s = "Search Results:<br />";
+    for (i=0;i<contacts.length;i++)
+    {
+        s = s + contacts[i].firstname + " " + contacts[i].lastname + "'s age is ... " + contacts[i].age + "<br />";
+    
+    }
+    document.getElementById("target").innerHTML = s;
+}
+</script>
+</head>
+<body>
+<button onclick="updatepage();">Update page</button><br />
+<span id="target">&nbsp;</span>
+
+</body>
+</html>
